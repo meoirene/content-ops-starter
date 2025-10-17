@@ -1,74 +1,106 @@
-# Content Ops Starter
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Portfolio</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-![Content Ops Starter](https://assets.stackbit.com/docs/content-ops-starter-thumb.png)
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#academic-projects" class="nav-link">Academic Projects</a></li>
+        <li><a href="#agency-projects" class="nav-link">Agency Work</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-Netlify starter that's made for customization with a flexible content model, component library, [visual editing](https://docs.netlify.com/visual-editor/overview/) and [Git Content Source](https://docs.netlify.com/create/content-sources/git/).
+  <header id="hero">
+    <h1>Your Name</h1>
+    <p>UX / UI Designer & Frontend Developer</p>
+  </header>
 
-**⚡ View demo:** [https://content-ops-starter.netlify.app/](https://content-ops-starter.netlify.app/)
+  <section id="about">
+    <div class="section-heading"><h2>About Me</h2></div>
+    <p>
+      I’m a student/graduate at RMIT, majoring in … I’m passionate about designing clean, user‑centered experiences.
+      I bring skills in UI design, interaction, prototyping, and frontend implementation.
+    </p>
+    <p>
+      <strong>Education:</strong> Bachelor of …, RMIT (20XX – 20XX) <br>
+      <strong>Skills / Tools:</strong> Figma, Adobe XD, HTML, CSS, JS, React, etc. <br>
+      <strong>Contact:</strong> your.email@example.com | LinkedIn | GitHub
+    </p>
+  </section>
 
-## Table of Contents
+  <section id="academic-projects">
+    <div class="section-heading"><h2>Academic Projects</h2></div>
 
-- [Deploying to Netlify](#deploying-to-netlify)
-- [Develop with Netlify Visual Editor Locally](#develop-with-netlify-visual-editor-locally)
-- [Building for production](#building-for-production)
-- [Setting Up Algolia Search](#setting-up-algolia-search)
-- [Next Steps](#next-steps)
-- [Support](#support)
+    <div class="project">
+      <h3>Project Title with Real Client</h3>
+      <div class="meta">Client: ABC Company | Semester 2, 2023 | Role: UI/UX Lead</div>
+      <p>Brief project description about goals, constraints, etc.</p>
+      <p><strong>My contributions:</strong> research, wireframes, prototyping, user testing, iteration.</p>
+      <p><strong>Outcome / results:</strong> what you delivered, any metrics or feedback.</p>
+      <div class="images">
+        <img src="images/project1-1.png" alt="Screenshot 1">
+        <img src="images/project1-2.png" alt="Screenshot 2">
+      </div>
+    </div>
 
-## Deploying to Netlify
+    <!-- Add more academic projects similarly -->
+  </section>
 
-If you click "Deploy to Netlify" button, it will create a new repo for you that looks exactly like this one, and sets that repo up immediately for deployment on Netlify.
+  <section id="agency-projects">
+    <div class="section-heading"><h2>Agency / Professional Projects</h2></div>
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/content-ops-starter)
+    <div class="project">
+      <h3>Agency Project Title</h3>
+      <div class="meta">Client: XYZ Brand | 2024 | Role: UI/UX Designer</div>
+      <p>Scope: redesign website, app, campaign landing, etc.</p>
+      <p><strong>KPIs / Metrics:</strong> e.g. +30% CTR, –20% bounce rate, etc.</p>
+      <p><strong>My Role:</strong> design ideation, prototyping, handoff, testing.</p>
+      <div class="images">
+        <img src="images/agency1-1.png" alt="Design view">
+        <img src="images/agency1-2.png" alt="Another view">
+      </div>
+    </div>
 
-## Develop with Netlify Visual Editor Locally
+    <!-- More agency projects -->
+  </section>
 
-The typical development process is to begin by working locally. Clone this repository, then run `npm install` in its root directory.
+  <section id="achievements" class="achievements">
+    <div class="section-heading"><h2>Achievements & Honors</h2></div>
+    <ul>
+      <li>2023 — Scholarship / Award from XYZ</li>
+      <li>2022 — Winner, ABC Design Competition</li>
+      <li>Certificate in UX Research, Institution</li>
+      <!-- more -->
+    </ul>
+  </section>
 
-Run the Next.js development server:
+  <footer id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: your.email@example.com</p>
+    <div class="contact-links">
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      <a href="https://behance.net/yourportfolio" target="_blank">Behance</a>
+    </div>
+  </footer>
 
-```txt
-cd content-ops-starter
-npm run dev
-```
-
-Install the [Netlify Visual Editor CLI](https://www.npmjs.com/package/@stackbit/cli). Then open a new terminal window in the same project directory and run the Netlify visual editor dev server:
-
-```txt
-npm install -g @stackbit/cli
-stackbit dev
-```
-
-This outputs your own Netlify visual editor URL. Open this, register, or sign in, and you will be directed to Netlify's visual editor for your new project.
-
-![Next.js Dev + Visual Editor Dev](https://assets.stackbit.com/docs/next-dev-stackbit-dev.png)
-
-## Building for production
-
-To build a static site for production, run the following command
-
-```shell
-npm run build
-```
-
-## Setting Up Algolia Search
-
-This starter includes Algolia search integration. To set it up:
-
-1. Create an [Algolia](https://www.algolia.com/) account
-2. Create a new application and index
-3. Set the following environment variables:
-   - `NEXT_PUBLIC_ALGOLIA_APP_ID` - Your Algolia application ID
-   - `NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY` - Your Algolia search-only API key
-   - `NEXT_PUBLIC_ALGOLIA_INDEX_NAME` - Your index name
-
-## Next Steps
-
-Here are a few suggestions on what to do next if you're new to Netlify visual editor:
-
-- Learn [Netlify visual editor overview](https://docs.netlify.com/visual-editor/visual-editing/)
-- Check [Netlify visual editor reference documentation](https://visual-editor-reference.netlify.com/)
-
-## Support
-
-If you get stuck along the way, get help in our [support forums](https://answers.netlify.com/).
+  <script src="script.js"></script>
+</body>
+</html>
